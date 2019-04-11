@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import FilterableProductTable from './FilterableProductTable'
+import FilterableProductTable from './FilterableProductTable';
+import Clock from './Clock';
 
 
 const PRODUCTS = [
@@ -17,19 +18,14 @@ class App extends Component {
 
 
   render() {
-    const time =new Date().toLocaleTimeString();
-    
-    
-    return (
+      return (
       <div className="App">
         <header className="App-header">
-            {time}
-           <img src={logo} className="App-logo" alt="logo" />
+          <Clock />
+          <img src={logo} className="App-logo" alt="logo" />
           <h2>Searchable Product List</h2>
           <FilterableProductTable products={PRODUCTS} />          
         </header>
-
-
       </div>
     );
   }
